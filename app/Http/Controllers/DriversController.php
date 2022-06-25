@@ -118,13 +118,14 @@ class DriversController extends Controller
     public function destroy($id)
     {
         $driver = Driver::find($id);
-        
+      /**   
         if (!isset($driver)){
             return redirect('/drivers')->with('error','This driver does not exist');
         }
         if(auth()->user()->id !==$driver->user_id){
             return redirect('/drivers')->with('error','Unathorised Access');
         }
+        */
         $driver->delete();
         return redirect('/drivers')->with('success','Driver Removed');
     }

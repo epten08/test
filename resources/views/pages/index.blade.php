@@ -14,8 +14,9 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Brach ID</th>
-                                <th>Tractor ID</th>
+                                
+                                <th>Branch Name</th>
+                                <th>Branch ID</th>
                                 <th>Driver Name</th>
                                 <th>Driver Surname</th>
                                 <th>Driver LicenseNO</th>
@@ -24,13 +25,16 @@
                         </thead>
                         <tbody>
                             @foreach ($data as $data)
+                            @foreach($data->drivers as $driver)
                             <tr>
-                                <td>{{ $data->branch_id }}</td>
-                                <td>{{ $data->tractor_id }}</td>
-                                <td>{{ $data->name}}</td>
-                                <td>{{ $data->surname}}</td>
-                                <td>{{ $data->licenseNo}}</td>
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->id }}</td>
+                                <td>{{ $driver->name}}</td>
+                                <td>{{ $driver->surname}}</td>
+                                <td>{{ $driver->licenseNo}}</td>
                             </tr>
+                            
+                            @endforeach
                             @endforeach
                         </tbody>
                     </table>

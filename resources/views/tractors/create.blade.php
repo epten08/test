@@ -8,7 +8,7 @@
   @endif
   <div class="card">
     <div class="card-header text-center font-weight-bold">
-      Laravel 8 - Add Blog Post Form Example
+      ADD NEW TRACTORS
     </div>
     <div class="card-body">
       <form name="createTractor" id="createTractor" method="post" action="{{url('create')}}">
